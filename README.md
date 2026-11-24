@@ -1,6 +1,8 @@
-# FreshTube — YouTube Recency Filter (Brave Extension)
+# FreshTube — YouTube Recency Filter (Chrome/Brave Browser Extension)
 
 FreshTube hides YouTube video recommendations older than your chosen age limit (default: **1 week**). You can customize the limit to any number of **hours, days, weeks, months, or years**, and choose which YouTube feeds to filter.
+
+<img width="320" height="503" alt="image" src="https://github.com/user-attachments/assets/a1e91e04-8204-474a-ad90-b130067beee7" />
 
 ## How to Install in Brave
 
