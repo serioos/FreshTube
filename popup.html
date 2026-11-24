@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreshTube Settings</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <img src="icons/icon48.png" alt="FreshTube icon" class="brand-icon" />
+        <div>
+          <h1>FreshTube</h1>
+          <p class="subtitle">YouTube Recency Filter</p>
+        </div>
+      </div>
+      <label class="switch" title="Enable or disable FreshTube">
+        <input type="checkbox" id="enabledToggle" checked />
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <section class="status-bar" id="statusBar">
+      <span class="status-dot" id="statusDot"></span>
+      <span id="statusText">Checking active tab…</span>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Max Video Age</h2>
+      <div class="presets" id="presets">
+        <button type="button" class="preset-btn" data-value="24" data-unit="hours">24h</button>
+        <button type="button" class="preset-btn" data-value="3" data-unit="days">3d</button>
+        <button type="button" class="preset-btn" data-value="1" data-unit="weeks">1w</button>
+        <button type="button" class="preset-btn" data-value="2" data-unit="weeks">2w</button>
+        <button type="button" class="preset-btn" data-value="1" data-unit="months">1mo</button>
+        <button type="button" class="preset-btn" data-value="3" data-unit="months">3mo</button>
+        <button type="button" class="preset-btn" data-value="1" data-unit="years">1y</button>
+      </div>
+
+      <div class="custom-row">
+        <label for="maxAgeValue" class="sr-only">Custom value</label>
+        <input type="number" id="maxAgeValue" min="1" max="999" value="1" />
+        <label for="maxAgeUnit" class="sr-only">Time unit</label>
+        <select id="maxAgeUnit">
+          <option value="hours">Hours</option>
+          <option value="days">Days</option>
+          <option value="weeks" selected>Weeks</option>
+          <option value="months">Months</option>
+          <option value="years">Years</option>
+        </select>
+      </div>
+      <p class="hint" id="summaryHint">Hiding recommendations older than 1 week.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Where to Filter</h2>
+      <label class="checkbox-row">
+        <input type="checkbox" id="scopeHome" checked />
+        <span>Home feed recommendations</span>
+      </label>
+      <label class="checkbox-row">
+        <input type="checkbox" id="scopeWatchSidebar" checked />
+        <span>Watch page sidebar ("Up next")</span>
+      </label>
+      <label class="checkbox-row">
+        <input type="checkbox" id="scopeSubscriptions" />
+        <span>Subscriptions feed</span>
+      </label>
+      <label class="checkbox-row">
+        <input type="checkbox" id="scopeSearch" />
+        <span>Search results</span>
+      </label>
+      <label class="checkbox-row">
+        <input type="checkbox" id="scopeChannel" />
+        <span>Channel pages</span>
+      </label>
+    </section>
+
+    <section class="card">
+      <label class="checkbox-row">
+        <input type="checkbox" id="keepLiveAndUpcoming" checked />
+        <span>Always keep Live streams &amp; Premieres</span>
+      </label>
+    </section>
+
+    <footer class="footer">
+      <span id="saveIndicator">Saved automatically</span>
+      <button type="button" id="resetBtn" class="link-btn">Reset defaults</button>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

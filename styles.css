@@ -1,0 +1,12 @@
+/* FreshTube — high-specificity non-destructive hiding compatible with Improve YouTube */
+html body [data-freshtube-hidden="true"],
+ytd-rich-item-renderer[data-freshtube-hidden="true"],
+ytd-compact-video-renderer[data-freshtube-hidden="true"],
+yt-lockup-view-model[data-freshtube-hidden="true"],
+ytd-video-renderer[data-freshtube-hidden="true"],
+ytd-grid-video-renderer[data-freshtube-hidden="true"],
+ytm-rich-item-renderer[data-freshtube-hidden="true"],
+ytm-video-with-context-renderer[data-freshtube-hidden="true"],
+ytm-compact-video-renderer[data-freshtube-hidden="true"] {
+  display: none !important;
+}
